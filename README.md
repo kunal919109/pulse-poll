@@ -4,7 +4,7 @@ PulsePoll is a full-stack real-time polling application where authenticated user
 
 ## Live Demo
 
-- Frontend: https://pulse-poll-frontend.onrender.com
+- Frontend: https://pulse-poll-frontend-jy7j.onrender.com
 - Backend API: https://pulse-poll-backend.onrender.com
 - Health Check: https://pulse-poll-backend.onrender.com/api/health
 
