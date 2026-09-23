@@ -27,7 +27,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/api/auth/register",
+        `${import.meta.env.VITE_API_URL}/api/auth/register`,
         {
           method: "POST",
           headers: {
@@ -38,7 +38,7 @@ function Register() {
             email,
             password,
           }),
-        }
+        }  
       );
 
       const data = await response.json();

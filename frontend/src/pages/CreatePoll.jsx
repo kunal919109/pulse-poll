@@ -97,7 +97,7 @@ function CreatePoll() {
       }
 
       const response = await fetch(
-        "http://localhost:8080/api/polls",
+        `${import.meta.env.VITE_API_URL}/api/polls`,
         {
           method: "POST",
           headers: {

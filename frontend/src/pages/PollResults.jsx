@@ -21,7 +21,7 @@ function PollResults() {
       }
 
       const response = await fetch(
-        `http://localhost:8080/api/polls/${id}/results`,
+        `${import.meta.env.VITE_API_URL}/api/polls/${id}/results`,
         {
           method: "GET",
           headers: {

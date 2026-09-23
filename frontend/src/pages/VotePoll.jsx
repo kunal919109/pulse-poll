@@ -24,9 +24,9 @@ function VotePoll() {
       }
 
       const response = await fetch(
-        `http://localhost:8080/api/polls/${id}`,
+       `${import.meta.env.VITE_API_URL}/api/polls/${id}`,
         {
-          method: "GET",
+          method: "GET", 
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -72,7 +72,7 @@ function VotePoll() {
       }
 
       const response = await fetch(
-        `http://localhost:8080/api/polls/${id}/vote`,
+        `${import.meta.env.VITE_API_URL}/api/polls/${id}/vote`,
         {
           method: "POST",
           headers: {
