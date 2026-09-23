@@ -10,7 +10,7 @@ PulsePoll is a full-stack real-time polling application where authenticated user
 
 ## Dashboard
 
-![PulsePoll Dashboard](docs/screenshots/dashboard.png.png)
+![PulsePoll Dashboard](docs/screenshots/dashboard.png)
 ## Features  
 
 - User registration and login
