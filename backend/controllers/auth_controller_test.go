@@ -50,3 +50,43 @@ func TestRegisterEmptyName(t *testing.T) {
 		)
 	}
 }  
+func TestLoginEmptyCredentials(t *testing.T) {
+	gin.SetMode(gin.TestMode)
+
+	router := gin.Default()
+	router.POST("/api/auth/login", Login)
+
+	body := `{
+		"email": "",
+		"password": ""
+	}`
+
+	req := httptest.NewRequest(
+		http.MethodPost,
+		"/api/auth/login",
+		strings.NewReader(body),
+	)
+
+	req.Header.Set("Content-Type", "application/json")
+
+	recorder := httptest.NewRecorder()
+
+	router.ServeHTTP(recorder, req)
+
+	if recorder.Code != http.StatusBadRequest {
+		t.Fatalf(
+			"expected status code 400, got %d",
+			recorder.Code,
+		)
+	}
+
+	expected := `{"message":"Email and password are required"}`
+
+	if recorder.Body.String() != expected {
+		t.Fatalf(
+			"expected response %s, got %s",
+			expected,
+			recorder.Body.String(),
+		)
+	}
+}  
