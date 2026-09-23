@@ -8,7 +8,10 @@ PulsePoll is a full-stack real-time polling application where authenticated user
 - Backend API: https://pulse-poll-backend.onrender.com
 - Health Check: https://pulse-poll-backend.onrender.com/api/health
 
-## Features
+## Dashboard
+
+![PulsePoll Dashboard](docs/screenshots/dashboard.png.png)
+## Features  
 
 - User registration and login
 - JWT-based authentication
