@@ -16,11 +16,9 @@ var DB *mongo.Database
 func ConnectDatabase() error {
 
 	// Load .env file
-	err := godotenv.Load()
-	if err != nil {
-		return fmt.Errorf("error loading .env file: %v", err)
-	}
-
+     // Load .env file if available.
+   // In production, environment variables are provided by the hosting platform.
+    _ = godotenv.Load()
 	// Get MongoDB connection string
 	mongoURI := os.Getenv("MONGODB_URI")
 
